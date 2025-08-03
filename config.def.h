@@ -7,8 +7,8 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono:size=10", "monospace:size=10" };
-static const char dmenufont[]       = "JetBrains Mono:size=10";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10", "monospace:size=10" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
 
 //===============================================================================
 // COLOR SCHEME - Modern Dark Theme with High Contrast
@@ -20,6 +20,7 @@ static const char text_primary[]    = "#15161e";  // Light blue-white text
 static const char text_secondary[]  = "#c0caf5";  // Muted text
 static const char accent_blue[]     = "#7aa2f7";  // Bright blue accent
 static const char accent_purple[]   = "#bb9af7";  // Purple accent
+static const char accent_red[]      = "#f38ba8";  // Red accent
 static const char border_inactive[] = "#6c7086";  // Muted border
 static const char urgent[]          = "#f7768e";  // Red for urgent/warnings
 
@@ -27,7 +28,7 @@ static const char urgent[]          = "#f7768e";  // Red for urgent/warnings
 static const char *colors[][3]      = {
 	/*                    fg              bg           border        */
 	[SchemeNorm]     = { text_secondary,  background,  border_inactive }, // Unfocused windows
-	[SchemeSel]      = { text_primary,    accent_purple, accent_purple}, // Focused window
+	[SchemeSel]      = { text_primary,    accent_red, accent_red}, // Focused window
 };
 
 //===============================================================================
@@ -91,7 +92,7 @@ static const char *dmenucmd[] = {
     "-fn", dmenufont, 
     "-nb", background,      // Normal background
     "-nf", text_secondary,  // Normal foreground
-    "-sb", accent_purple,     // Selected background
+    "-sb", accent_red,     // Selected background
     "-sf", background,      // Selected foreground
     "-p", "Run:",          // Prompt text
     NULL 
